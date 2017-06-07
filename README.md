@@ -34,6 +34,12 @@ Based on the above request, a following response will be observed :-
 # Testing
 Tried testing the application with manual test cases but couldnt execute the test cases correctly as everytime, there occured a substantial difference within the values.
 
+# Thoughts about Scalable Design
+To make the application scalable to close to 100 apis(i.e. different Weather api to aggregate data from) , the design that I could think of is that an API interface can be created that every new API has to implement.
+The Interface will have just the fields such as String url and String APP Key.
+A list of all APIs can be created which will keep a track of the total APIs that need to hit to aggregate data. For example if we have abc-API in the application, we can just implement the functionality using the interface and then add that API to the list to be called by the application. 
+This is how I think the application can be made more scalable
+
 
 
 
